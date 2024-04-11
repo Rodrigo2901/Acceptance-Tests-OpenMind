@@ -32,6 +32,11 @@
     <td>E06</td>
     <td>Seguridad y Privacidad de Datos</td>
     <td>Garantizar la seguridad y privacidad de los datos de los usuarios en la plataforma para cumplir con los estándares de protección de datos.</td>
+   </tr>
+   <tr>
+    <td>E07</td>
+    <td>Soporte al Usuario</td>
+    <td>Proporcionar capacitación y soporte efectivos a los usuarios para garantizar que puedan aprovechar al máximo todas las funcionalidades de la plataforma.</td>
   </tr>
 </table>
 
@@ -399,4 +404,26 @@ Entonces recibe una respuesta rápida y detallada del equipo de soporte para res
 </td>
     <td>E06</td>
   </tr>
+   </tr>
+      <td>US18</td>
+    <td>Creación de Foro de usuarios</td>
+    <td>Como usuario de la plataforma, quiero tener acceso a un foro de usuarios donde pueda hacer preguntas, intercambiar ideas y compartir experiencias con otros usuarios.</td>
+    <td>Escenario 1:
+Dado que el usuario accede al foro de usuarios desde la plataforma.
+Cuando encuentra un enlace o botón dedicado al foro en la interfaz.
+Entonces se le redirige a una sección donde puede ver las discusiones más recientes y participar en ellas.
+
+Escenario 2:
+Dado que el usuario tiene una pregunta o problema.
+Cuando publica una nueva pregunta o tema en el foro.
+Entonces recibe respuestas y comentarios de otros usuarios de la comunidad, así como del equipo de soporte si es necesario.
+
+Escenario 3:
+Dado que el usuario desea buscar discusiones anteriores.
+Cuando utiliza la función de búsqueda dentro del foro.
+Entonces encuentra hilos de discusión relevantes que abordan su pregunta o problema y puede encontrar soluciones previamente publicadas.
+</td>
+    <td>E07</td>
+  </tr>
+    </tr>
 </table>

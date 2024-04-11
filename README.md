@@ -1,4 +1,5 @@
 <table>
+  <tr>
     <th>Epic ID</th>
     <th>Título</th>
     <th>Descripción</th>
@@ -8,45 +9,50 @@
     <td>Creación y Gestión de Cuentas de Usuario</td>
     <td>Desarrollar la funcionalidad de registro, inicio de sesión y gestión de cuentas de usuario.</td>
   </tr>
-   <tr>
-   <td>E02</td>
+  <tr>
+    <td>E02</td>
     <td>Búsqueda y Filtrado de Empresas de Postes.</td>
     <td>Implementar la funcionalidad de búsqueda y filtrado para permitir a las empresas de telecomunicaciones encontrar empresas de instalación de postes según sus necesidades.</td>
   </tr>
-   <tr>
+  <tr>
     <td>E03</td>
     <td>Gestión de Proyectos de Instalación de Postes.</td>
     <td>Desarrollar la funcionalidad para que las empresas de instalación de postes gestionen sus proyectos de manera efectiva desde la plataforma.</td>
   </tr>
-   <tr>
+  <tr>
     <td>E04</td>
     <td>Funcionalidades Avanzadas de Interacción</td>
     <td>Desarrollar funcionalidades avanzadas para mejorar la interacción entre las empresas de telecomunicaciones y las empresas de instalación de postes.</td>
   </tr>
-   <tr>
+  <tr>
     <td>E05</td>
     <td>Mejora de la Experiencia del Usuario</td>
     <td>Mejorar la experiencia del usuario en la plataforma para garantizar una navegación intuitiva y una interacción fluida.</td>
   </tr>
-   <tr>
+  <tr>
     <td>E06</td>
     <td>Seguridad y Privacidad de Datos</td>
     <td>Garantizar la seguridad y privacidad de los datos de los usuarios en la plataforma para cumplir con los estándares de protección de datos.</td>
-   </tr>
-   <tr>
+  </tr>
+  <tr>
     <td>E07</td>
     <td>Soporte al Usuario</td>
     <td>Proporcionar capacitación y soporte efectivos a los usuarios para garantizar que puedan aprovechar al máximo todas las funcionalidades de la plataforma.</td>
   </tr>
-   <tr>
+  <tr>
     <td>E08</td>
     <td>Integración con Plataformas de Pago</td>
     <td>Integrar la plataforma con sistemas de pago para facilitar la facturación y el procesamiento de transacciones para suscripciones y servicios adicionales.</td>
   </tr>
-   <tr>
+  <tr>
     <td>E09</td>
     <td>Mejoras en la Presentación y Experiencias del Usuario</td>
     <td>Mejoras relacionadas con la presentación visual, el diseño, el contenido y la experiencia del usuario tanto en la landing page como en todas las páginas estáticas del sitio web.</td>
+  </tr>
+  <tr>
+    <td>E10</td>
+    <td>Implementación de Seguridad en el RESTful API</td>
+    <td>Implementar las funcionalidades de seguridad necesarias en el RESTful API para garantizar la autenticación y autorización adecuadas de los usuarios.</td>
   </tr>
 </table>
 
@@ -414,7 +420,7 @@ Entonces recibe una respuesta rápida y detallada del equipo de soporte para res
 </td>
     <td>E07</td>
   </tr>
-   </tr>
+    </tr>
       <td>US18</td>
     <td>Creación de Foro de usuarios</td>
     <td>Como usuario de la plataforma, quiero tener acceso a un foro de usuarios donde pueda hacer preguntas, intercambiar ideas y compartir experiencias con otros usuarios.</td>
@@ -436,7 +442,7 @@ Entonces encuentra hilos de discusión relevantes que abordan su pregunta o prob
     <td>E07</td>
   </tr>
     </tr>
-     <td>US19</td>
+      <td>US19</td>
     <td>Integración con Pasarelas de Pago</td>
     <td>Como Developer, quiero integrar la plataforma con pasarelas de pago confiables y seguras para procesar transacciones de suscripción y pagos por servicios adicionales.</td>
     <td>Escenario 1:
@@ -476,7 +482,9 @@ Cuando accede a la sección de gestión de suscripciones y selecciona la opción
 Entonces se le guía a través del proceso de cancelación y su suscripción se cancela correctamente sin complicaciones.
 </td>
     <td>E08</td>
- <td>US21</td>
+  </tr>
+    </tr>
+      <td>US21</td>
     <td>Implementación de Diseño Responsivo</td>
     <td>Como Developer, quiero implementar un diseño responsivo en el sitio web para garantizar una experiencia de usuario óptima en todos los dispositivos y tamaños de pantalla.</td>
     <td>Escenario 1:
@@ -559,5 +567,74 @@ Cuando llega a la sección de testimonios o casos de éxito.
 Entonces encuentra testimonios auténticos de clientes satisfechos o ejemplos de éxito que respaldan la credibilidad y confianza en la plataforma.
 </td>
     <td>E09</td>
+ </tr>
+    <td>US26</td>
+    <td>Autenticación de Usuarios a través de API</td>
+    <td>Como Developer, quiero implementar una API de autenticación de usuarios que permita a los clientes autenticarse y obtener un token de acceso para acceder a las funciones protegidas de la API.</td>
+    <td>Escenario 1: 
+Dado que el Developer recibe las credenciales de inicio de sesión del cliente. 
+Cuando las envía a la API de autenticación. 
+Entonces la API verifica las credenciales y devuelve un token de acceso válido si son correctas.
+
+Escenario 2:
+Dado que el cliente proporciona un token de acceso caducado.
+Cuando lo envía a la API en una solicitud protegida. Entonces la API devuelve un error indicando que el token ha caducado y solicita al cliente que vuelva a autenticarse.
+</td>
+    <td>E10</td>
+ </tr>
+    <td>US27</td>
+    <td>Creación de Nuevos Usuarios a través de API</td>
+    <td>Como Developer, quiero implementar una API que permita a los clientes crear nuevos usuarios en el sistema.</td>
+    <td>Escenario 1: 
+Dado que el cliente envía una solicitud de creación de usuario a la API. 
+Cuando proporciona los datos necesarios para crear un nuevo usuario. 
+Entonces la API crea el usuario y devuelve un mensaje de confirmación.
+
+Escenario 2:
+Dado que el cliente intenta crear un usuario con credenciales inválidas o incompletas.
+Cuando envía una solicitud de creación de usuario a la API.
+Entonces la API devuelve un error indicando los campos inválidos o faltantes.
+</td>
+    <td>E10</td>
+ </tr>
+    <td>US28</td>
+    <td>Gestión de Proyectos a través de API</td>
+    <td>Como Developer, quiero implementar una API que permita a los clientes gestionar proyectos en el sistema, incluyendo la creación, actualización y eliminación de proyectos.</td>
+    <td>Escenario 1: 
+Dado que el cliente envía una solicitud de creación de proyecto a la API. 
+Cuando proporciona los datos necesarios para crear un nuevo proyecto. 
+Entonces la API crea el proyecto y devuelve un mensaje de confirmación.
+
+Escenario 2:
+Dado que el cliente envía una solicitud de actualización de proyecto a la API.
+Cuando proporciona los datos actualizados para un proyecto existente.
+Entonces la API actualiza el proyecto y devuelve un mensaje de confirmación.
+
+Escenario 3:
+Dado que el cliente envía una solicitud de eliminación de proyecto a la API.
+Cuando proporciona el identificador de un proyecto existente.
+Entonces la API elimina el proyecto y devuelve un mensaje de confirmación.
+</td>
+    <td>E10</td>
+ </tr>
+    <td>US29</td>
+    <td>Gestión de Cotizaciones a través de API</td>
+    <td>Como Developer, quiero implementar una API que permita a los clientes gestionar cotizaciones en el sistema, incluyendo la creación, actualización y eliminación de cotizaciones.</td>
+    <td>Escenario 1: 
+Dado que el cliente envía una solicitud de creación de cotización a la API. 
+Cuando proporciona los datos necesarios para crear una nueva cotización. 
+Entonces la API crea la cotización y devuelve un mensaje de confirmación.
+
+Escenario 2:
+Dado que el cliente envía una solicitud de actualización de cotización a la API.
+Cuando proporciona los datos actualizados para una cotización existente.
+Entonces la API actualiza la cotización y devuelve un mensaje de confirmación.
+
+Escenario 3:
+Dado que el cliente envía una solicitud de eliminación de cotización a la API.
+Cuando proporciona el identificador de una cotización existente.
+Entonces la API elimina la cotización y devuelve un mensaje de confirmación.
+</td>
+    <td>E10</td>
  </tr>
 </table>
